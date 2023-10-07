@@ -1,6 +1,5 @@
 import { galleryItems } from './gallery-items.js';
 
-
 function createGalleryItems() {
     return galleryItems
         .map(item => `
@@ -17,16 +16,12 @@ function createGalleryItems() {
         .join('');
 }
 
-
 const galleryContainer = document.querySelector('.gallery');
 galleryContainer.innerHTML = createGalleryItems();
 
 
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-
 const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
+    captions: true, 
+    captionsData: 'alt', 
+    captionDelay: 250, 
 });
